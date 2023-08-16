@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!--...................css link..............................................................-->
+    <link rel="stylesheet" href="./assets/style.css">
+    <!--...................Font awesome link..............................................................-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+<!--------------------------------------------------------nav bar------------------------------------------------------------------->
+    <nav>
+        <div class="container nav-container">
+            <a href="#Home" class="logo">RISH<SPAN>PORTFOLIO</SPAN></a> 
+                <ul class="nav-links">
+                    <li><a href="#Home" class="active">Home</a></li>
+                    <li><a href="#About">About</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#Portfolio">Portfolio</a></li>
+                    <li><a href="#Contact" >Contact</a></li>
+                </ul>
+                <button><i class="fa fa-bars"></i></button>
+        </div>   
+    </nav>
+ <!--------------------------------------------------------nav bar------------------------------------------------------------------->
+ <!--------------------------------------------------------header section------------------------------------------------------------------->
+    <header>
+        <div class="container header-container">
+            <div class="header-left">
+                <h1>FrontEnd<br> Web Developer</h1>
+                <h3>Hi, There I'm Rishabh</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis temporibus repudiandae quae est explicabo corporis rerum cupiditate exercitationem facilis nihil?</p>
+                <a href="./assets/CV/CV.pdf" class="btn" download>Download CV</a>
+            </div>
+            <div class="header-right">
+                <div class="circle">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-github"></i></a>
+                </div>
+                <div class="hero-image">
+                    <img src="pexels-roberto-nickson-2775196.jpg" alt="hello">
+                </div>
+            </div>
+        </div>
+    </header>
+  <!--------------------------------------------------------header section ends-------------------------------------------------------------------> 
+   <!--------------------------------------------------------About section------------------------------------------------------------------->  
+   <section id="about">
+    <h2>About Me</h2>
+       <div class="container about-container">
+        <div class="about-left">
+            <div class="about-image">
+                <img src="pexels-roberto-nickson-2775196.jpg" alt="">
+            </div>
+        </div>
+        <div class="about-right">
+            <h4>I'm the world</h4>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dignissimos delectus id rem debitis obcaecati ipsa temporibus similique veritatis architecto repellendus?</p>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nobis quos ad ipsum iusto tempore sed!</p>
+            <a href="" class="btn">Contact Me</a>
+        </div>
+       </div> 
+   </section>
+    <!--------------------------------------------------------About section ends------------------------------------------------------------------->
+    <!-------------------------------------------------------Skills Section------------------------------------------------------------------->
+    <section id="skills">
+        <h2>Skills</h2>
+        <div class="container skills-container">
+        <div class="skill-left">
+            <div class="progress">
+                <div class="info">
+                    <h5>HTML</h5>
+                    <h5>90%</h5>
+                </div>
+                <div class="out-row">
+                    <div class="inner-row">
+
+                    </div>
+                </div>
+            </div>
+            <div class="progress">
+                <div class="info">
+                    <h5>css</h5>
+                    <h5>78%</h5>
+                </div>
+                <div class="out-row">
+                    <div class="inner-row">
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="progress">
+                <div class="info">
+                    <h5>JS</h5>
+                    <h5>90%</h5>
+                </div>
+                <div class="out-row">
+                    <div class="inner-row">
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="progress">
+                <div class="info">
+                    <h5>JAVA</h5>
+                    <h5>90%</h5>
+                </div>
+                <div class="out-row">
+                    <div class="inner-row">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="skill-right">
+            <div class="skills-right">
+                <img src="car-1803_256.gif" alt="">
+            </div>
+        </div>    
+        </div>
+    </section>
+    <!-------------------------------------------------------Skills Section ends------------------------------------------------------------------->
+    <!-------------------------------------------------------script section------------------------------------------------------------------------>
+    <script>
+        //nav scroll.......
+        let nav=document.querySelector('nav');
+
+        window.addEventListener('scroll',()=>{
+            nav.classList.toggle('nav-scroll',window.scrollY>0);
+        });
+        // active toggle
+        AllNavLinkA = document.querySelectorAll('.nav-links li a');
+
+        AllNavLinkA.forEach(item=>{
+        item.addEventListener('click',()=>{
+            removeActive();
+            item.classList.add('active');
+        })
+    });
+    //active remove....
+    const removeActive=()=>AllNavLinkA.forEach(item=>{
+        item.classList.remove('active');
+    });
+    //nav links toggle....
+    let menuBars = document.querySelector('nav button');
+    let navlinks = document.querySelector('.nav-links');
+    menuBars.addEventListener('click',()=>{
+        navlinks.classList.toggle('nav-link-block');
+    });
+    </script>
+    <!-------------------------------------------------------script section ends------------------------------------------------------------------------>
+
+</body>
+</html>
